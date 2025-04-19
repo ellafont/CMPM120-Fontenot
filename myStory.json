@@ -1,0 +1,101 @@
+{
+  "Title": "Quest for the Sword of Starlight",
+  "Credits": "Created by Adam Smith (amsmith@ucsc.edu), Extended by Ella Fontenot.",
+  "InitialLocation": "Foothills Camp",
+  "Items": {
+    "Rune of Radiance": {
+      "Location": "Crystal Grove"
+    }
+  },
+  "Locations": {
+    "Foothills Camp": {
+      "Body": "You stand at the base of Mount Doom. Mist shrouds its peak. The wind howls. A river rushes north. A mountain path leads west.",
+      "Choices": [
+        { "Text": "Follow the river north", "Target": "Rushing River" },
+        { "Text": "Climb the mountain path", "Target": "Troll Bridge" }
+      ]
+    },
+    "Rushing River": {
+      "Body": "The river is wild and fast. A broken raft lies nearby.",
+      "Choices": [
+        { "Text": "Try to cross", "Target": "Death by Drowning" },
+        { "Text": "Return to the Foothills", "Target": "Foothills Camp" }
+      ]
+    },
+    "Death by Drowning": {
+      "Body": "The current pulls you under. Your quest ends here."
+    },
+    "Troll Bridge": {
+      "Body": "A foul-smelling troll blocks a rickety rope bridge. 'I want meat!' he snarls.",
+      "Choices": [
+        { "Text": "Give him jerky", "Target": "Echoing Cavern" },
+        { "Text": "Try to sneak past", "Target": "Troll Fight" }
+      ]
+    },
+    "Troll Fight": {
+      "Body": "The troll clubs you into the mud. Your vision fades. Game over."
+    },
+    "Echoing Cavern": {
+      "Body": "Your voice echoes eerily. A stone pedestal invites you to sing or shout.",
+      "Class": "EchoingCavern",
+      "Choices": [
+        { "Text": "Sing a melody", "Target": "Crystal Grove" },
+        { "Text": "Shout loudly", "Target": "Cave Collapse" }
+      ]
+    },
+    "Cave Collapse": {
+      "Body": "Your shout causes the cavern to collapse behind you. You must return to the Foothills.",
+      "Choices": [
+        { "Text": "Backtrack", "Target": "Foothills Camp" }
+      ]
+    },
+    "Crystal Grove": {
+      "Body": "Crystals shimmer in the gloom. A pedestal holds the Rune of Radiance.",
+      "Choices": [
+        { "Text": "Take the Rune", "Target": "Rune Acquired" },
+        { "Text": "Return to Cavern", "Target": "Echoing Cavern" }
+      ]
+    },
+    "Rune Acquired": {
+      "Body": "You have acquired the Rune of Radiance. It glows with untold power.",
+      "Choices": [
+        { "Text": "Go to the Sword Shrine", "Target": "Sword Shrine" }
+      ]
+    },
+    "Sword Shrine": {
+      "Body": "A massive stone door blocks your way. It glows faintly.",
+      "Choices": [
+        {
+          "Text": "Use Rune to open the door",
+          "Target": "Enter Shrine",
+          "RequiredItem": "Rune of Radiance"
+        }
+      ]
+    },
+    "Door Blocked": {
+      "Body": "You push against the massive stone door, but it refuses to move. The rune-shaped indentation in the center glows faintly, as if waiting for something. Without the Rune of Radiance, you won't be able to proceed.",
+      "Choices": [
+        { "Text": "Return to the Echoing Cavern", "Target": "Echoing Cavern" }
+      ]
+    },
+    "Enter Shrine": {
+      "Body": "The shrine opens. Inside lies the Sword of Starlight.",
+      "Choices": [
+        { "Text": "Take the sword and ascend the summit", "Target": "Wizard's Summit" }
+      ]
+    },
+    "Wizard's Summit": {
+      "Body": "With the Sword of Starlight in hand, you face Maldrak the Dread in a swirl of shadow and flame.",
+      "Choices": [
+        { "Text": "Attack Maldrak", "Target": "Victory" },
+        { "Text": "Drop your sword and surrender", "Target": "Defeat" }
+      ]
+    },
+    "Victory": {
+      "Body": "Your strike shatters Maldrak's staff. Light floods the sky. You have saved the realm."
+    },
+    "Defeat": {
+      "Body": "You fall to your knees. Maldrak laughs. Darkness reigns."
+    }
+  }
+}
